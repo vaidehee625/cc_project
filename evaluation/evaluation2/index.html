@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airline Reservation System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Registration / Login -->
+    <div id="auth-section" class="card">
+      <h2>Passenger Login / Register</h2>
+      <input type="text" id="username" placeholder="Enter username">
+      <input type="password" id="password" placeholder="Enter password">
+      <button onclick="register()">Register</button>
+      <button onclick="login()">Login</button>
+      <p id="auth-msg"></p>
+    </div>
+
+    <!-- Flight Search -->
+    <div id="flight-section" class="card hidden">
+      <h2>Search Available Flights</h2>
+      <input type="text" id="source" placeholder="Source">
+      <input type="text" id="destination" placeholder="Destination">
+      <input type="date" id="date">
+      <button onclick="searchFlights()">Search</button>
+      <div id="flight-results"></div>
+    </div>
+
+    <!-- Booking History -->
+    <div id="history-section" class="card hidden">
+      <h2>Your Bookings</h2>
+      <div id="booking-history"></div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

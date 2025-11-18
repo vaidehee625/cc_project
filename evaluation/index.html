@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Rental System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header> Vehicle Rental System</header>
+
+  <!-- Registration Section -->
+  <div class="container" id="registrationSection">
+    <h2>User Registration</h2>
+    <input type="text" id="name" placeholder="Enter name">
+    <input type="email" id="email" placeholder="Enter email">
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="registerUser()">Register</button>
+    <p id="registerMsg"></p>
+  </div>
+
+  <!-- Login Section -->
+  <div class="container hidden" id="loginSection">
+    <h2>User Login</h2>
+    <input type="email" id="loginEmail" placeholder="Enter email">
+    <input type="password" id="loginPassword" placeholder="Enter password">
+    <button onclick="loginUser()">Login</button>
+    <p id="loginMsg"></p>
+  </div>
+
+  <!-- Vehicle Section -->
+  <div class="container hidden" id="vehicleSection">
+    <h2>Available Vehicles</h2>
+
+    <label>Filter by Type:</label>
+    <select id="filterType" onchange="displayVehicles()">
+      <option value="">All</option>
+      <option value="Car">Car</option>
+      <option value="Bike">Bike</option>
+      <option value="SUV">SUV</option>
+    </select>
+
+    <label>Filter by Location:</label>
+    <select id="filterLocation" onchange="displayVehicles()">
+      <option value="">All</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Chennai">Chennai</option>
+    </select>
+
+    <table id="vehicleTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Type</th>
+          <th>Location</th>
+          <th>Rent/day (₹)</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h2>Your Rental History</h2>
+    <table id="rentalHistoryTable">
+      <thead>
+        <tr>
+          <th>Vehicle</th>
+          <th>Location</th>
+          <th>Days</th>
+          <th>Total Cost (₹)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
